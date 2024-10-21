@@ -13,10 +13,10 @@ public class GameManager : MonoBehaviour
     //este script controla todo, funcionalidad y variabbles
 
     public static GameManager instance; // accesible a todo (variable estática) SINGLETON
-    public enum GameManagerVariables { TIME, POINTS }; // tipo enum (enumerar) para facilitar la lectura de código, time seria 0, points 1
+    public enum GameManagerVariables { TIME, KILLS }; // tipo enum (enumerar) para facilitar la lectura de código, time seria 0, points 1
 
     private float time;
-    private int points;
+    private int kills;
 
 
     //[HideInInspector]
@@ -59,19 +59,19 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseScore(int amount) // este metodo sirve para que los puntos puedan ir amuentando
     {
-        points += amount;
+        kills += amount;
     }
-    public int GetPoints()
+    public int GetKills()
     {
 
-        return points;
+        return kills;
 
     }
 
     //setter
-    public void SetPoints(int value)
+    public void SetKills(int value)
     {
-        points = value;
+        kills = value;
     }
 
     public void LoadScene(string sceneName)
