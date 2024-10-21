@@ -10,9 +10,16 @@ public class ButtonFunctions : MonoBehaviour
         GameManager.instance.ExitGame();
     }
 
-    public void LoadCharacter(int CharacterName)
+    public void LoadCharacter(int CharacterIndex)
     {
-        GameManager.instance.characterType = (Characters)CharacterName;
+        GameManager.instance.characterType = (Characters)CharacterIndex;
+
+        foreach (Transform child in transform.parent)
+        {  
+            child.SendMessage("ChangeImage", CharacterIndex, SendMessageOptions.DontRequireReceiver);// sendmessage recorre cada uno de los componentes del objeto y comprueba que tenga el changeimage
+        }
+
+
     }
 
     public void LoadScene(string sceneName)
