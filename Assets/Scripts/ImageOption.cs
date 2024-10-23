@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public struct SelectionData
+public struct SelectionData // CREAMOS UNA STRUCTURA PARA LA SELECCCION DE PERSONAJE 
 {
     public Sprite img;
     public string textSkill;
@@ -13,10 +13,10 @@ public struct SelectionData
 
 public class ImageOption : MonoBehaviour
 {
-    public SelectionData[] data;
+    public SelectionData[] data;//creamos un array de seleccion
 
     private Image imageComponent;
-    public TMP_Text textComponent;
+    public TMP_Text textComponent;// Texto donde se mostrarán las habilidades
     public GameObject skillsPanel; // Panel que contiene el texto de habilidades
 
     private void Start()
