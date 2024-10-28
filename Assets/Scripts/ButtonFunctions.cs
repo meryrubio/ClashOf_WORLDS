@@ -17,6 +17,8 @@ public class ButtonFunctions : MonoBehaviour
         foreach (Transform child in transform.parent)
         {  
             child.SendMessage("ChangeImage", CharacterIndex, SendMessageOptions.DontRequireReceiver);// sendmessage recorre cada uno de los componentes del objeto y comprueba que tenga el changeimage
+
+
         }
 
 
