@@ -489,11 +489,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - img: {fileID: 21300000, guid: 2de7b57560954e8449b2eedf0c6fa3b5, type: 3}
-    textSkill: asfasdf
+    textSkill: "L\xEDder del grupo de \xE9lite, un soldado experimentado con un fuerte
+      sentido del deber y t\xE1cticas de combate. Equipado con X"
   - img: {fileID: 21300000, guid: 897a8935ac5537a4498045b34f2d4fe2, type: 3}
-    textSkill: dfhdfh
+    textSkill: "El vacil\xF3n del grupo de \xE9lite, un soldado experimentado con
+      un fuerte sentido del deber y experto en escopetas. Este soldado entrenado
+      desde peque\xF1o para matar lleva en el casco una representaci\xF3n de su personaje
+      favorito Ghost Face adoptando su nombre de soldado al mismo."
   - img: {fileID: 21300000, guid: cb67be0b64547934da0829978f51b63d, type: 3}
-    textSkill: tjhjkljl
+    textSkill: "Un soldado de \xE9lite con casco de pantera es un guerrero excepcionalmente
+      entrenado, que encarna agilidad y ferocidad. Su casco simboliza sigilo y poder,
+      reflejando su habilidad para moverse con precisi\xF3n y atacar con eficacia,
+      convirti\xE9ndolo en una fuerza temida en el campo de batalla y un experto
+      en el asesinato silencioso."
   textComponent: {fileID: 1097719081}
   skillsPanel: {fileID: 0}
 --- !u!114 &552104843
@@ -1308,7 +1316,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -155.19196, y: -206.00513, z: -163.96022, w: -198.81285}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
