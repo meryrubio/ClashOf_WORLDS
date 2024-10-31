@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public enum Characters //tipo enumerado, le puede poner nombres a los numeros: el 0=craneo, 1= ghostface, 2=panther.
 {
-    CRANEO, GHOSTFACE, PANTHER
+    CRANEO, GHOSTFACE, PANTERA
 }
 public class GameManager : MonoBehaviour
 {
