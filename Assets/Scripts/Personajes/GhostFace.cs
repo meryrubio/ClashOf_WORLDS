@@ -7,10 +7,10 @@ namespace ClashofWorlds
 {
     public class GhostFace : Character
     {
-        public GhostFace(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("GhostFace"))
+        public GhostFace(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("GhostFace"), 15, 2)
         {
         }
 
-
+       
     }
 }

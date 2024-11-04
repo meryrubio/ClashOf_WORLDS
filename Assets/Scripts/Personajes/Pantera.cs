@@ -7,10 +7,9 @@ namespace ClashofWorlds
 {
     public class Pantera : Character
     {
-        public Pantera(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("FuriaMordada"))
+        public Pantera(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("FuriaMordada"), 10, 1) 
         {
         }
-
 
     }
 }

@@ -6,7 +6,7 @@ namespace ClashofWorlds
 {
     public class Craneo : Character
     {
-        public Craneo(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("smooth"))
+        public Craneo(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("smooth"), 5, 0.1f)
         {
         }
 

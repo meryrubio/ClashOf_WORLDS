@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class CharacterManager : MonoBehaviour
     public float speed;
     protected ClashofWorlds.Character character; //variable protejida para los personajes
     Animator animator;
+    private float currentTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,12 @@ public class CharacterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        currentTime += Time.deltaTime;
+        if (currentTime >= character.rate && Input.GetAxis("Fire1") != 0)
+        {
+            currentTime = 0;
+            character.Attack(transform);
+        }
     }
    
 }
