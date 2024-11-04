@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace ClashofWorlds
 {
-    public class Craneo : Character
+    public class Craneo : PlayableCharacter
     {
-        public Craneo(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("smooth"), 5, 0.1f)
+        public Craneo(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("smooth"), 50, 100, 0.1F)
         {
         }
 

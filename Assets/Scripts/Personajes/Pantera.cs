@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace ClashofWorlds
 {
-    public class Pantera : Character
+    public class Pantera : PlayableCharacter
     {
-        public Pantera(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("FuriaMordada"), 10, 1) 
+        public Pantera(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("FuriaMordada"), 10, 100, 1) 
         {
         }
 

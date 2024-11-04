@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace ClashofWorlds
 {
-    public class GhostFace : Character
+    public class GhostFace : PlayableCharacter
     {
-        public GhostFace(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("GhostFace"), 15, 2)
+        public GhostFace(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("GhostFace"), 15, 100, 2)
         {
         }
 

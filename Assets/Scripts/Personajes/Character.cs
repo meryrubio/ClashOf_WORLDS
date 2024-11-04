@@ -7,22 +7,20 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
     public abstract class Character
     {
         //informacion de los players
-        private Animator _animator;
+        protected Animator _animator;
         //private AnimatorController _controller;
-        
-      
-        public float speed, damage, health, rate;
+
+
+        public float speed, damage, health;
         protected GameObject _obj;
         protected Rigidbody _rb;
-        public GameObject bullet; 
 
-        public Character(float speed, Rigidbody rb, GameObject obj , float damage, float rate) //constructor general de los personajes
+        public Character(float speed, Rigidbody rb, GameObject obj, float damage, float health) //constructor general de los personajes
         {
             this.speed = speed;
             _rb = rb;
             _obj = obj;
-            bullet = Resources.Load<GameObject>("bullet"); // para crear la bala
-            this.rate = rate; 
+            this.health = health;
             //_controller = cont;
 
         }
@@ -34,7 +32,7 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
         {
             return damage;
         }
-       
+
         public virtual float Heal() //el metodo que aparecera en los hijos para la vida 
 
         {
@@ -42,10 +40,6 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
             health = Mathf.Clamp(health, 0, 100);  // lo clampeamos para que al curarse no sobrepase los 100 de vida 
             return health;
         }
-        public virtual void Attack(Transform ownerTransform)
-        { 
-          GameObject.Instantiate(bullet, ownerTransform.position, Quaternion.identity); 
-        }
-        
+        public abstract void Attack(Transform ownerTransform);
     }
 }
