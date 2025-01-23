@@ -41,5 +41,18 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
             return health;
         }
         public abstract void Attack(Transform ownerTransform);
+
+        public virtual void ReceiveDamage(float damage)
+        {
+
+        }
+
+        public virtual void Death()
+        {
+
+        }
+        
+            
+        
     }
 }
