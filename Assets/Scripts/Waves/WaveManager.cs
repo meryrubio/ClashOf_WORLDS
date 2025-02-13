@@ -28,6 +28,7 @@ public class WaveManager : MonoBehaviour
             if (enemy != null)
             {
                 enemy.SetActive(true);
+                enemy.transform.position = transform.position;
                 activeEnemies++; // Incrementa el contador de enemigos activos
                 //Enemy enemyBehaviour = enemy.GetComponent<Enemy>();
                 //if (enemyBehaviour != null)

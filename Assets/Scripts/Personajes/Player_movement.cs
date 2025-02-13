@@ -14,6 +14,7 @@ using UnityEngine;
         {
             characterController = GetComponent<CharacterController>();
             gravityScale = Mathf.Abs(gravityScale);
+           
         }
 
         // Update is called once per frame

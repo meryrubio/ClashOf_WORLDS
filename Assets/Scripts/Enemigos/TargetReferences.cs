@@ -6,4 +6,9 @@ public class TargetReferences : MonoBehaviour
 {
     // script creado para poder llevar el target a la herencia 
     public GameObject target;
+
+    private void Start()
+    {
+        target = FindObjectOfType<Player_movement>().gameObject;
+    }
 }
