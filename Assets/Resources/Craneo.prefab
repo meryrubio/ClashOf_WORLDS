@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181f04fab7ef4b8488839ec4cf3e9edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolSize: 0
+  poolSize: 5
   shouldExpand: 1
   objectToPool: {fileID: 2665574890043752376, guid: c7e6623855fe7094e81749adab996c70, type: 3}
   poolType: 0
@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 78d65869828c7d9438b4705d8ca5eacb, type: 3}
       propertyPath: m_Name
-      value: smooth
+      value: Craneo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

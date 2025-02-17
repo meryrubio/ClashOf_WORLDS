@@ -30,6 +30,8 @@ public class CharacterManager : MonoBehaviour
             character = new ClashofWorlds.Pantera(speed, GetComponent<Rigidbody>());
         }
         GameObject obj = Instantiate(character.GetObject(), transform.position, Quaternion.identity, transform);
+        Camera.main.transform.parent = obj.transform;
+       // Camera.main.transform.position = Vector3.zero;
 
     }
 

@@ -38,7 +38,7 @@ using UnityEngine;
             Jump(jumpPressed);
             InterpolateSpeed(shiftPressed, x, z);
             Movement(x, z, shiftPressed);
-            Rotation(mouseX);
+            //Rotation(mouseX);
         }
         private void FixedUpdate()
         {
