@@ -40,7 +40,7 @@ public class CharacterManager : MonoBehaviour
         if (currentTime >= character.rate && Input.GetAxis("Fire1") != 0)
         {
             currentTime = 0;
-            character.Attack(transform);
+            character.Attack(gameObject); 
         }
     }
    

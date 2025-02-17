@@ -1030,6 +1030,7 @@ MonoBehaviour:
   poolSize: 30
   shouldExpand: 0
   objectToPool: {fileID: 4951861930165319949, guid: 8eef0fe0841b46f4992cf30ea7478396, type: 3}
+  poolType: 2
 --- !u!4 &771645713
 Transform:
   m_ObjectHideFlags: 0

@@ -17,9 +17,9 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
 
         }
 
-        public override void Attack(Transform ownerTransform)
-        { 
-            GameObject.Instantiate(bullet, ownerTransform.position, Quaternion.identity); 
+        public override void Attack(GameObject owner) 
+        {
+            GameObject.Instantiate(bullet, owner.transform.position, Quaternion.identity);
         }
         
     }

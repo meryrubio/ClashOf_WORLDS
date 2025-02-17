@@ -14,35 +14,19 @@ public class WaveManager : MonoBehaviour
 
     private void Start()
     {
-        StartWave();    
+        StartWave(); 
+        
     }
-
+    public void SpawnEnemies(int enemyCount)
+    {
+        StartCoroutine(SpawnEnemiesOverTime(enemyCount));
+    }
     // Método para iniciar una nueva oleada
     public void StartWave()
     {
         int enemiesToSpawn = baseEnemiesPerWave + (currentWave) * 5; // Aumento de 5 enemigos por oleada
-
-        for (int i = 0; i < enemiesToSpawn; i++)
-        {
-            GameObject enemy = objectPooler.GimmeInactiveGameObject();
-            if (enemy != null)
-            {
-                enemy.SetActive(true);
-                enemy.transform.position = transform.position;
-                activeEnemies++; // Incrementa el contador de enemigos activos
-                //Enemy enemyBehaviour = enemy.GetComponent<Enemy>();
-                //if (enemyBehaviour != null)
-                //{
-                //    enemyBehaviour.onDeath += OnEnemyDeath; // Suscribe el evento de muerte del enemigo
-                //    // ES POSIBLE QUE EL EVENTO SE DUPLIQUE Y CASDA VEZ QUE AVANCEMOS DE RONDA, LA MUERTE DEL ENEMIGO CUENTE X2, X3,...
-                //}
-            }
-            else
-            {
-                Debug.LogWarning("No more enemies available in pool. Consider increasing pool size or allowing expansion.");
-                break;
-            }
-        }
+        SpawnEnemies(enemiesToSpawn); 
+        activeEnemies = enemiesToSpawn;
         currentWave++;
     }
 
@@ -55,4 +39,32 @@ public class WaveManager : MonoBehaviour
             StartWave(); // Inicia la siguiente oleada
         }
     }
+
+    private IEnumerator SpawnEnemiesOverTime(int enemyCount)
+    {
+        for (int i = 0; i < enemyCount; i++)
+        {
+            GameObject enemy = objectPooler.GimmeInactiveGameObject();
+            if (enemy != null)
+            {
+                enemy.SetActive(true);
+                enemy.transform.position = transform.position;
+                activeEnemies++;
+                // Incrementa el contador de enemigos activos
+                //Enemy enemyBehaviour = enemy.GetComponent<Enemy>();
+                //if (enemyBehaviour != null)
+                //{
+                //    enemyBehaviour.onDeath += OnEnemyDeath; // Suscribe el evento de muerte del enemigo
+                //    // ES POSIBLE QUE EL EVENTO SE DUPLIQUE Y CASDA VEZ QUE AVANCEMOS DE RONDA, LA MUERTE DEL ENEMIGO CUENTE X2, X3,...
+                //}
+            }
+            else
+            {
+                Debug.LogWarning("No more enemies available in pool. Consider increasing pool size or allowing expansion.");
+                break;
+            }
+            yield return new WaitForSeconds(3f);
+        }
+    }
+    
 }

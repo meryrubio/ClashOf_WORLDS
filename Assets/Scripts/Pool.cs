@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PoolType { BULLET, GRENADE,ENEMY}
 public class Pool : MonoBehaviour
 {
     private List<GameObject> poolList;
@@ -11,6 +12,7 @@ public class Pool : MonoBehaviour
     public bool shouldExpand = false; // Por si tenemos que expandir la pool
     [Tooltip("Object to add")]
     public GameObject objectToPool;
+    public PoolType poolType;
     // Start is called before the first frame update
     void Start()
     {

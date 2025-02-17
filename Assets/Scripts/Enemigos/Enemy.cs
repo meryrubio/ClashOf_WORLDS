@@ -16,7 +16,7 @@ public abstract class Enemy : Character
         
     } 
 
-    public override void Attack(Transform ownerTransform)
+    public override void Attack(GameObject owner)
     {
 
     }
