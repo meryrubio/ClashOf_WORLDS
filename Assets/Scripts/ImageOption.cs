@@ -43,10 +43,10 @@ public class ImageOption : MonoBehaviour
             // Debug.Log(platform.transform.localEulerAngles.y);
             Vector3 nDir = Vector3.RotateTowards(platform.transform.up, rotation, platformSpeed * Time.deltaTime, 0.0f);
             platform.transform.Rotate(nDir);
-            print(platform.transform.localEulerAngles.magnitude);
-            print(rotation.magnitude);
+            //print(platform.transform.localEulerAngles.magnitude);
+            //print(rotation.magnitude);
             angle = Mathf.Abs(platform.transform.localEulerAngles.magnitude - rotation.magnitude);
-            print(angle);
+            //print(angle);
 
             yield return null;
         }

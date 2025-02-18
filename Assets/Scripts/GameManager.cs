@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     private float time;
     private int kills;
-
+   
 
     //[HideInInspector]
     public Characters characterType; //variable para los personajes, sea posible elegir el tipo de personaje

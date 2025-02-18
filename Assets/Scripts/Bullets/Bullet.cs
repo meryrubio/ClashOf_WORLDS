@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using ClashofWorlds;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class Bullet : MonoBehaviour
 {
@@ -9,8 +8,7 @@ public class Bullet : MonoBehaviour
     public Vector3 dir;
     private Rigidbody rb;
     private float currentTime = 0;
-    public float damage = .1f;
-    Character character;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +25,7 @@ public class Bullet : MonoBehaviour
         {
             currentTime = 0;
             speed = 0;
-            
+
         }
     }
 
@@ -37,7 +35,7 @@ public class Bullet : MonoBehaviour
         rb.velocity = dir * speed;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
         
     }

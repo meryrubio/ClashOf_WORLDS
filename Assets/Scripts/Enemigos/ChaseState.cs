@@ -23,7 +23,7 @@ public class ChaseState : State
         GameObject target = owner.GetComponent<TargetReferences>().target; // para que persiga al objetivo 
 
         navMeshAgent.SetDestination(target.transform.position); // dice al agente que su destino es el transform del objetivo y esquivara los obstaculos para llegar al objetivo
-        Debug.Log("Chasing!");
+        
         //animator?.SetFloat(blendParameter, navMeshAgent.velocity.magnitude / navMeshAgent.speed);
         return nextState;
     }

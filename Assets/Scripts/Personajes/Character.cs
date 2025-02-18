@@ -36,7 +36,7 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
         public virtual float Heal() //el metodo que aparecera en los hijos para la vida 
 
         {
-            Debug.Log("Character se cura");
+            
             health = Mathf.Clamp(health, 0, 100);  // lo clampeamos para que al curarse no sobrepase los 100 de vida 
             return health;
         }
