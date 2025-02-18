@@ -13,8 +13,8 @@ public abstract class Enemy : Character
 
     public Enemy(float speed, Rigidbody rb, GameObject obj, float damage, float health) : base(5, rb, Resources.Load<GameObject>("Enemy"), 10, 100)//constructor general de los personajes
     {
-        
-    } 
+
+    }
 
     public override void Attack(GameObject owner)
     {
@@ -24,7 +24,7 @@ public abstract class Enemy : Character
     public override void Death()
     {
         base.Death();
-        onDeath.Invoke();  
+        onDeath.Invoke();
     }
 
     public override void ReceiveDamage(float damage)
@@ -36,6 +36,7 @@ public abstract class Enemy : Character
             Death();
         }
     }
-
-    
 }
+    
+    
+    

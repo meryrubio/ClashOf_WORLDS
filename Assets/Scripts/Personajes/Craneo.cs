@@ -6,13 +6,14 @@ namespace ClashofWorlds
 {
     public class Craneo : PlayableCharacter
     {
-        public Craneo(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("Craneo"), 50, 100, 0.1F)
+        public Craneo(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("Craneo"), 10,200,0.1f)
         {
         }
 
         public override void Attack(GameObject owner)
         {
             BulletSpawn(owner.transform, owner.GetComponentInChildren<BulletPool>().bulletPool);
+             
         }
 
         void BulletSpawn(Transform transform, Pool bulletPool)

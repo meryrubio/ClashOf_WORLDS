@@ -49,7 +49,7 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
 
         public virtual void Death()
         {
-
+            
         }
         
             
