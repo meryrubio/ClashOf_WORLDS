@@ -1960,12 +1960,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc629c9dfb449c4c8e497fca4e05ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 500
+  walkingSpeed: 10
   mouseSens: 100
   gravityScale: 10
   jumpForce: 200
-  runningSpeed: 100
-  acceleration: 10
+  runningSpeed: 5
+  acceleration: 2
 --- !u!143 &1729010399
 CharacterController:
   m_ObjectHideFlags: 0
