@@ -10,14 +10,12 @@ namespace ClashofWorlds
         public Vector3 dir;
         private Rigidbody rb;
         private float currentTime = 0;
-        Character character, enemy;
         // Start is called before the first frame update
         void Start()
         {
 
            rb = GetComponent<Rigidbody>();
-           character = GetComponent<Character>();
-           enemy = GetComponent<Enemy>();
+           
         }
 
         // Update is called once per frame
@@ -41,9 +39,11 @@ namespace ClashofWorlds
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.GetComponent<Player_movement>())
+            EnemyTypeReference type = other.GetComponent<EnemyTypeReference>();
+            if (type)
             {
-                enemy.health -= character.damage;
+                CharacterManager cm = FindObjectOfType<CharacterManager>();
+                type.enemyType.health -= cm.character.damage;
                 gameObject.SetActive(false);
                 
             }

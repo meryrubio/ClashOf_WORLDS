@@ -49,6 +49,8 @@ public class WaveManager : MonoBehaviour
             {
                 enemy.SetActive(true);
                 enemy.transform.position = transform.position;
+                enemy.GetComponent<EnemyTypeReference>().enemyType = new Enemy(2, GetComponent<Rigidbody>(), 10, 100);  
+
                 activeEnemies++;
                 // Incrementa el contador de enemigos activos
                 //Enemy enemyBehaviour = enemy.GetComponent<Enemy>();

@@ -21,6 +21,7 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
             _rb = rb;
             _obj = obj;
             this.health = health;
+            this.damage = damage;
             //_controller = cont;
 
         }

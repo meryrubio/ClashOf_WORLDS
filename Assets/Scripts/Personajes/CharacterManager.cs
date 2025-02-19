@@ -8,7 +8,7 @@ public class CharacterManager : MonoBehaviour
 {
 
     public float speed;
-    protected ClashofWorlds.PlayableCharacter character; //variable protejida para los personajes
+    public ClashofWorlds.PlayableCharacter character; //variable protejida para los personajes
     Animator animator;
     private float currentTime;
     // Start is called before the first frame update
