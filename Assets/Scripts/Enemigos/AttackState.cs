@@ -7,7 +7,6 @@ using UnityEngine;
 public class AttackState : State
 {
     public float attackRange = 2f; // Rango de ataque
-    public float attackDamage = 10f; // Daño del ataque
     public float attackCooldown = 5; // Tiempo de recarga entre ataques
     public float currentTime = 5; // Tiempo de recarga entre ataques
                                   // Tiempo del último ataque
@@ -58,18 +57,16 @@ public class AttackState : State
 
     private void Attack(GameObject player)
     {
-        // Aquí se implementa la lógica de ataque
-        //Por ejemplo, se puede hacer daño al jugador
+        Player_movement pm = player.GetComponent<Player_movement>();
+        if (pm)
+        {
+            CharacterManager cm = FindObjectOfType<CharacterManager>();
+            EnemyTypeReference type = FindObjectOfType<EnemyTypeReference>();
+            cm.character.health -= type.enemyType.damage;
+            
+        }
 
-        //if (Health != null)
-        //{
-        //  playerHealth.Damage(attackDamage); 
-        //}
-
-        //Animator animator = owner.GetComponent<Animator>();
-        //animator.SetBool(blendParameter, true);
-
-        Debug.Log($"Attacked {player.name} for {attackDamage} damage!");
+        Debug.Log($"Attacked {player.name} for  damage!");
     }
 
     private void MoveTowardsEnemy(GameObject owner, GameObject player)

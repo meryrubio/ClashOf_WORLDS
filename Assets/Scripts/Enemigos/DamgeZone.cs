@@ -19,14 +19,14 @@ public class DamgeZone : MonoBehaviour
         foreach (RaycastHit hit in hits)
         {
             // verifica si el objeto golpeado tiene el componente Health
-            PlayerHealth playerHealth = hit.collider.GetComponent<PlayerHealth>();
-            if (playerHealth != null) //verifica  si se encontro un componente PlayerHealth
-                                      //Si playerHealth no es null, significa que tiene un componente PlayerHealth
-            {
-                health.TakeDamage(1);
-                canDamage = false;
-                StartCoroutine(CoolDownDamage());
-            }
+            //PlayerHealth playerHealth = hit.collider.GetComponent<PlayerHealth>();
+            //if (playerHealth != null) //verifica  si se encontro un componente PlayerHealth
+            //                          //Si playerHealth no es null, significa que tiene un componente PlayerHealth
+            //{
+            //    health.TakeDamage(1);
+            //    canDamage = false;
+            //    StartCoroutine(CoolDownDamage());
+            //}
         }
 
       
