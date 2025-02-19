@@ -60,11 +60,14 @@ public class AttackState : State
     {
         // Aquí se implementa la lógica de ataque
         //Por ejemplo, se puede hacer daño al jugador
-        
+
         //if (Health != null)
         //{
         //  playerHealth.Damage(attackDamage); 
         //}
+
+        //Animator animator = owner.GetComponent<Animator>();
+        //animator.SetBool(blendParameter, true);
 
         Debug.Log($"Attacked {player.name} for {attackDamage} damage!");
     }

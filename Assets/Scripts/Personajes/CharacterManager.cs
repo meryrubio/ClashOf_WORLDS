@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using static UnityEngine.UI.GridLayoutGroup;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -41,7 +42,9 @@ public class CharacterManager : MonoBehaviour
         if (currentTime >= character.rate && Input.GetAxis("Fire1") != 0)
         {
             currentTime = 0;
-            character.Attack(gameObject); 
+            character.Attack(gameObject);
+            //Animator animator = owner.GetComponent<Animator>();
+            //animator.SetBool(blendParameter, true);
         }
     }
    
