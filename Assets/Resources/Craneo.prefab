@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolSize: 5
   shouldExpand: 1
-  objectToPool: {fileID: 2665574890043752376, guid: c7e6623855fe7094e81749adab996c70, type: 3}
+  objectToPool: {fileID: 4396853450812480223, guid: 95993bf044de95f4e9672f180b900305, type: 3}
   poolType: 0
 --- !u!114 &8856137552675957863
 MonoBehaviour:
@@ -73,15 +73,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 78d65869828c7d9438b4705d8ca5eacb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.9000003
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78d65869828c7d9438b4705d8ca5eacb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.9000003
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78d65869828c7d9438b4705d8ca5eacb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.9000003
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78d65869828c7d9438b4705d8ca5eacb, type: 3}
       propertyPath: m_LocalPosition.x

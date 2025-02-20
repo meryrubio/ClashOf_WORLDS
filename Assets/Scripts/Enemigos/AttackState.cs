@@ -16,6 +16,10 @@ public class AttackState : State
         State nextState = CheckActions(owner);
         // Verificar si hay un enemigo en rango
         GameObject player = FindPlayer(owner);
+
+        Animator animator = owner.GetComponentInChildren<Animator>();
+        animator?.Play("attack");
+
         if (player != null)
         {
             currentTime += Time.deltaTime;
@@ -63,7 +67,7 @@ public class AttackState : State
             CharacterManager cm = FindObjectOfType<CharacterManager>();
             EnemyTypeReference type = FindObjectOfType<EnemyTypeReference>();
             cm.character.health -= type.enemyType.damage;
-            
+            cm.character.Death(player);
         }
 
         Debug.Log($"Attacked {player.name} for  damage!");

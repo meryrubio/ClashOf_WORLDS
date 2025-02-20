@@ -87,5 +87,12 @@ public class GameManager : MonoBehaviour
         Application.Quit();// cierra la aplicación
     }
 
-
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+    }
+    public void PauseMenu()
+    {
+        Time.timeScale = 0;
+    }
 }

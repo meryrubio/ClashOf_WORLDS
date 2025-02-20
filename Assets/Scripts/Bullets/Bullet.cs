@@ -28,7 +28,7 @@ namespace ClashofWorlds
                 speed = 0;
 
             }
-
+            
         }
 
         private void FixedUpdate()
@@ -45,7 +45,7 @@ namespace ClashofWorlds
                 CharacterManager cm = FindObjectOfType<CharacterManager>();
                 type.enemyType.health -= cm.character.damage;
                 gameObject.SetActive(false);
-                
+                type.enemyType.Death(type.gameObject);
             }
         }
 

@@ -43,12 +43,12 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
         }
         public abstract void Attack(GameObject owner); 
 
-        public virtual void ReceiveDamage(float damage)
+        public virtual void ReceiveDamage(float damage, GameObject owner)
         {
 
         }
 
-        public virtual void Death()
+        public virtual void Death(GameObject owner)
         {
             
         }

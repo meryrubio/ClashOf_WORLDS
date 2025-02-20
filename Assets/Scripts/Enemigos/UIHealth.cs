@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIHealth : MonoBehaviour
 {
-    public TMP_Text text;
+    public Image barraDeVida;
     private EnemyTypeReference typeReference;
 
     // Start is called before the first frame update
@@ -17,6 +18,6 @@ public class UIHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = typeReference.enemyType.health.ToString();
+        barraDeVida.fillAmount = typeReference.enemyType.health/100;
     }
 }

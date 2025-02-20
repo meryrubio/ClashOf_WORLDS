@@ -21,19 +21,15 @@ public class Enemy : Character
 
     }
 
-    public override void Death()
+    public override void Death(GameObject owner)
     {
-        base.Death();
-        onDeath.Invoke();
-    }
-
-    public override void ReceiveDamage(float damage)
-    {
-        Debug.Log("me hace daño");
-        health -= damage;
         if (health <= 0)
         {
-            Death();
+          GameManager.instance.IncreaseScore(1);
+          health = 100;
+            owner.GetComponentInChildren<Animator>()?.Play("die");
+          //owner.SetActive(false);
+            
         }
     }
 }

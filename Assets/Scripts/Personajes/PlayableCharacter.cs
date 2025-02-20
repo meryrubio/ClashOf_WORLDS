@@ -21,6 +21,11 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
         {
             GameObject.Instantiate(bullet, owner.transform.position, Quaternion.identity);
         }
-        
+
+        public override void Death(GameObject owner)
+        {
+           
+        }
+
     }
 }
