@@ -24,6 +24,7 @@ public class WaveManager : MonoBehaviour
     // Método para iniciar una nueva oleada
     public void StartWave()
     {
+        OnEnemyDeath();
         int enemiesToSpawn = baseEnemiesPerWave + (currentWave) * 5; // Aumento de 5 enemigos por oleada
         SpawnEnemies(enemiesToSpawn); 
         activeEnemies = enemiesToSpawn;
