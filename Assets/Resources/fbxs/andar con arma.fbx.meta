@@ -23,12 +23,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Emission
-    second: {fileID: 5125955998383885961, guid: ae63d15f94a72e04db97f589f44eeff5, type: 3}
+    second: {fileID: 5125955998383885961, guid: 4461857cd94956d4f9d8e42707c2a3f2, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MaterialCabeza
     second: {fileID: 2100000, guid: a0594354e359be747a21a66e341bf7a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pantalon
+    second: {fileID: 2100000, guid: 18354c77e9ff6f940836626a07f9a45e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -39,6 +44,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: emission.001
     second: {fileID: 2100000, guid: 7b7033afbf2b5f44f9cbe6bb04f5be44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ojos y nariz
+    second: {fileID: 5265296862912640637, guid: 262b0d561e1d31a4ebab10860254cffe, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

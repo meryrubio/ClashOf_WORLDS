@@ -591,6 +591,32 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!1 &672159097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11a91e9da54025b458a74657e129e825, type: 3}
+  m_PrefabInstance: {fileID: 1176830313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &672159098
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672159097}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec17a381687eb2946aa28efb33653ccf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &739384176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,11 +1080,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 11a91e9da54025b458a74657e129e825, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 322.29623
+      value: 321.856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11a91e9da54025b458a74657e129e825, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.024789
+      value: 12.857
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11a91e9da54025b458a74657e129e825, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1099,7 +1125,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11a91e9da54025b458a74657e129e825, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 672159098}
   m_SourcePrefab: {fileID: 100100000, guid: 11a91e9da54025b458a74657e129e825, type: 3}
 --- !u!1 &1216774914
 GameObject:
