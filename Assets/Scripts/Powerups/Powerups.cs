@@ -2,7 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Powerups 
+public enum powerupEnum {SHOOTINGSPEED, RESTAUREHEALTH}
+public abstract class Powerups 
 {
-   
+    private Mesh mesh;
+
+    public Powerups(Mesh mesh) { this.mesh = mesh;  }
+    public abstract void takePower(GameObject player);
+
+    public Mesh GetMesh() { return mesh; }  
 }
