@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 
@@ -9,15 +10,48 @@ using UnityEngine;
         public float walkingSpeed, mouseSens, gravityScale, jumpForce, runningSpeed, acceleration;
         private float yvelocity = 0, currentSpeed;
         private CharacterController characterController;
-        // Start is called before the first frame update
-        void Start()
+
+        // Variables de entrada
+        private InputActionAsset inputAsset;
+        private InputAction moveAction;
+        private InputAction jumpAction;
+        private Vector2 moveInput;
+
+    // Start is called before the first frame update
+
+        void Awake()
         {
             characterController = GetComponent<CharacterController>();
             gravityScale = Mathf.Abs(gravityScale);
+
+            // Inicializar el sistema de entrada
+            inputAsset = GetComponent<PlayerInput>().actions;
+            moveAction = inputAsset.FindAction("Move");
+            jumpAction = inputAsset.FindAction("Jump");
+        }   
+
+        void Start()
+        {
+            //characterController = GetComponent<CharacterController>();
+            //gravityScale = Mathf.Abs(gravityScale);
            
         }
 
+
+        private void OnEnable()
+        {
+            moveAction.Enable();
+            jumpAction.Enable();
+        }
+
+        private void OnDisable()
+        {
+            moveAction.Disable();
+            jumpAction.Disable();
+        }
+
         // Update is called once per frame
+
         void Update()
         {
             if (characterController.isGrounded)
@@ -27,17 +61,31 @@ using UnityEngine;
 
             }
 
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
-            float mouseX = Input.GetAxis("Mouse X");
-            bool jumpPressed = Input.GetKeyDown(KeyCode.Space);
-            bool shiftPressed = Input.GetKey(KeyCode.LeftShift);
+            // Leer la entrada de movimiento
+            moveInput = moveAction.ReadValue<Vector2>();
+            bool jumpPressed = jumpAction.triggered; // Verificar si se ha presionado el salto
+            bool shiftPressed = Keyboard.current.leftShiftKey.isPressed;
 
+            //float x = Input.GetAxis("Horizontal");
+            //float z = Input.GetAxis("Vertical");
+            //float mouseX = Input.GetAxis("Mouse X");
+            //bool jumpPressed = Input.GetKeyDown(KeyCode.Space);
+            //bool shiftPressed = Input.GetKey(KeyCode.LeftShift);
 
-            // salto
-            Jump(jumpPressed);
-            InterpolateSpeed(shiftPressed, x, z);
-            Movement(x, z, shiftPressed);
+            // Salto
+            if (jumpPressed && characterController.isGrounded)
+            {
+                yvelocity += jumpForce;
+            }
+            //// salto
+            //Jump(jumpPressed);
+
+            // Movimiento
+            InterpolateSpeed(shiftPressed, moveInput.x, moveInput.y);
+            Movement(moveInput.x, moveInput.y, shiftPressed);
+
+            //InterpolateSpeed(shiftPressed, x, z);
+            //    Movement(x, z, shiftPressed);
             //Rotation(mouseX);
         }
         private void FixedUpdate()
