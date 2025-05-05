@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageIncrease : MonoBehaviour
+public class DamageIncrease : Powerups
 {
-    // Start is called before the first frame update
-    void Start()
+    public DamageIncrease() : base(null)
     {
-        
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void takePower(GameObject player)
     {
-        
+        player.GetComponent<CharacterManager>().character.damage *= 2;
     }
 }

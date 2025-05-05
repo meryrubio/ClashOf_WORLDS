@@ -10,6 +10,6 @@ public class ShootingSpeed : Powerups
 
     public override void takePower(GameObject player)
     {
-        throw new System.NotImplementedException();
+        player.GetComponent<CharacterManager>().character.rate *= 2;
     }
 }

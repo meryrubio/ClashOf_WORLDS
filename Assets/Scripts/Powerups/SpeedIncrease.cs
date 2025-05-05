@@ -10,6 +10,7 @@ public class SpeedIncrease : Powerups
 
     public override void takePower(GameObject player)
     {
-        throw new System.NotImplementedException();
+        player.GetComponent<Player_movement>().walkingSpeed *= 2;
+        player.GetComponent<Player_movement>().runningSpeed *= 2;
     }
 }
