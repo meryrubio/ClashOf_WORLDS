@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Join",
+                    "type": "Button",
+                    "id": "8f6273e6-071a-429c-8b72-2cbd0db785ba",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -251,6 +260,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7df3840e-82e9-4f1c-af09-4416d9e1f30c",
+                    "path": "keyboard/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse;Joystick",
+                    "action": "Join",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
