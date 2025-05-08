@@ -30,7 +30,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1717366997503853662}
-  - {fileID: 5029267729754879952}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4782216567801643741
@@ -45,7 +44,7 @@ GameObject:
   - component: {fileID: 931026496474155008}
   - component: {fileID: 8602280854135236759}
   - component: {fileID: 8770937145818588770}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -61,11 +60,11 @@ Transform:
   m_GameObject: {fileID: 4782216567801643741}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 635.968, y: 100.63613, z: 109505.14}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7021181701968743098}
+  m_Father: {fileID: 1717366997503853662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &931026496474155008
 Camera:
@@ -172,10 +171,11 @@ Transform:
   m_GameObject: {fileID: 8624336370510437509}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5219395, y: 0.34612834, z: -0.7642294}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5029267729754879952}
   m_Father: {fileID: 7021181701968743098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7094764979859433047
@@ -206,7 +206,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9fa8b2cb9d5b0724fa2e947742d5224f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -287,12 +287,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc629c9dfb449c4c8e497fca4e05ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 0
+  walkingSpeed: 15
   mouseSens: 0
-  gravityScale: 0
-  jumpForce: 0
-  runningSpeed: 0
-  acceleration: 0
+  gravityScale: 10
+  jumpForce: 15
+  runningSpeed: 15
+  acceleration: 1
 --- !u!114 &8852722973548392758
 MonoBehaviour:
   m_ObjectHideFlags: 0

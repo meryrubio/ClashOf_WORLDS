@@ -16,7 +16,12 @@ using UnityEngine.InputSystem;
         private InputActionMap player;
         private InputAction moveAction;
         private InputAction jumpAction;
+        private InputAction joinAction;
         private Vector2 moveInput;
+
+
+
+    public GameObject playerPrefab;
 
     // Start is called before the first frame update
 
@@ -28,6 +33,9 @@ using UnityEngine.InputSystem;
             // Inicializar el sistema de entrada
             inputAsset = GetComponent<PlayerInput>().actions;
             player = inputAsset.FindActionMap("Player");
+        moveAction = player.FindAction("Move");
+        jumpAction = player.FindAction("Jump");
+        joinAction = player.FindAction("Join");
          
         }   
 
@@ -74,10 +82,15 @@ using UnityEngine.InputSystem;
             //bool shiftPressed = Input.GetKey(KeyCode.LeftShift);
 
             // Salto
-            if (jumpPressed && characterController.isGrounded)
+            if (jumpPressed /*&& characterController.isGrounded*/)
             {
                 yvelocity += jumpForce;
             }
+
+            if(jumpPressed)
+        {
+            Instantiate(playerPrefab, transform.position, Quaternion.identity);
+        }
             //// salto
             //Jump(jumpPressed);
 

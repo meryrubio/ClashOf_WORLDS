@@ -567,7 +567,7 @@ Transform:
   m_GameObject: {fileID: 517478102}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.09, z: 0}
+  m_LocalPosition: {x: 0, y: 21.4, z: 0}
   m_LocalScale: {x: 31.499151, y: 31.499151, z: 31.499151}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -826,7 +826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &771645712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,7 +2028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1977967472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2379,21 +2379,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerprefab
       objectReference: {fileID: 0}
-    - target: {fileID: 4782216567801643741, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7021181701968743098, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5219395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7021181701968743098, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34612834
+      value: 24.6
       objectReference: {fileID: 0}
     - target: {fileID: 7021181701968743098, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7642294
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7021181701968743098, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2423,10 +2419,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7534030680152860935, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+    - target: {fileID: 8769554628207740491, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
+      propertyPath: jumpForce
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769554628207740491, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
+      propertyPath: playerPrefab
       value: 
-      objectReference: {fileID: 2100000, guid: 9fa8b2cb9d5b0724fa2e947742d5224f, type: 2}
+      objectReference: {fileID: 298404051211036724, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
