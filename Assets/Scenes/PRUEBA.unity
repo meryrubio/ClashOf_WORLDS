@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 3
-  m_MaxPlayerCount: -1
+  m_MaxPlayerCount: 3
   m_AllowJoining: 1
   m_JoinBehavior: 1
   m_PlayerJoinedEvent:
@@ -2379,6 +2379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerprefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4782216567801643741, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7021181701968743098, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5219395
@@ -2419,6 +2423,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7534030680152860935, guid: 82ab1ba5623fb6b44ab6f3aab4a3a736, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fa8b2cb9d5b0724fa2e947742d5224f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

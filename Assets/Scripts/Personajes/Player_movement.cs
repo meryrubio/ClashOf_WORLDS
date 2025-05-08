@@ -13,6 +13,7 @@ using UnityEngine.InputSystem;
 
         // Variables de entrada
         private InputActionAsset inputAsset;
+        private InputActionMap player;
         private InputAction moveAction;
         private InputAction jumpAction;
         private Vector2 moveInput;
@@ -26,8 +27,8 @@ using UnityEngine.InputSystem;
 
             // Inicializar el sistema de entrada
             inputAsset = GetComponent<PlayerInput>().actions;
-            moveAction = inputAsset.FindAction("Move");
-            jumpAction = inputAsset.FindAction("Jump");
+            player = inputAsset.FindActionMap("Player");
+         
         }   
 
         void Start()
