@@ -87,15 +87,15 @@ using UnityEngine.InputSystem;
                 yvelocity += jumpForce;
             }
 
-            if(jumpPressed)
-        {
-            Instantiate(playerPrefab, transform.position, Quaternion.identity);
-        }
-            //// salto
-            //Jump(jumpPressed);
+        //if (jumpPressed)
+        //{
+        //    Instantiate(playerPrefab, transform.position, Quaternion.identity);
+        //}
+        //// salto
+        //Jump(jumpPressed);
 
-            // Movimiento
-            InterpolateSpeed(shiftPressed, moveInput.x, moveInput.y);
+        // Movimiento
+        InterpolateSpeed(shiftPressed, moveInput.x, moveInput.y);
             Movement(moveInput.x, moveInput.y, shiftPressed);
 
             //InterpolateSpeed(shiftPressed, x, z);
