@@ -3,7 +3,32 @@ guid: 06b5063dd6e84e2428bfc42271473d46
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CHALECO
+    second: {fileID: 2100000, guid: e44f6b72b9423294a8dba5b25daa464c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LENGUETA
+    second: {fileID: 9142866922515634576, guid: 3f135c6e91030d0448d8632e388fd6a7, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arma.001
+    second: {fileID: 2100000, guid: 6b117d56163fbb8449534527bca0e348, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cristalbueno
+    second: {fileID: 2100000, guid: 2f057ea81cf50cd4788f14a4d6ad123f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "empu\xF1adura"
+    second: {fileID: 2100000, guid: 9ac911f4cb1c8a547a27d18b33c42fe6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
