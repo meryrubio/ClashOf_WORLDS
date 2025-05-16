@@ -7,7 +7,7 @@ namespace ClashofWorlds
     public class Craneo : PlayableCharacter
     {
         public GameObject gameOverPanel;
-        public Craneo(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("Craneo"), 10, 200, 0.1f)
+        public Craneo(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("craneoconarmaAPUNTANDOblend"), 10, 200, 0.1f)
         {
         }
 

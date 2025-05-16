@@ -8,7 +8,7 @@ namespace ClashofWorlds
 {
     public class GhostFace : PlayableCharacter
     {
-        public GhostFace(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("GhostFace"), 15, 100, 2)
+        public GhostFace(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("Ghostface"), 15, 100, 2)
         {
         }
         public override void Attack(GameObject owner)
