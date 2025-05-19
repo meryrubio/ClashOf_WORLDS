@@ -6,9 +6,14 @@ using UnityEngine.Pool;
 public class BulletPool : MonoBehaviour
 {
     public Pool bulletPool;
-    public PoolType poolTypeToSearch; 
+    public PoolType poolTypeToSearch;
 
-
+    //public enum PoolType
+    //{
+    //    CraneoBullet,
+    //    GhostFaceBullet,
+    //    PanteraBullet
+    //}
 
 
     private void Start()
