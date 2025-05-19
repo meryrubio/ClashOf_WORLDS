@@ -275,7 +275,7 @@
                 {
                     "name": "",
                     "id": "7df3840e-82e9-4f1c-af09-4416d9e1f30c",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -386,6 +386,15 @@
                     "type": "PassThrough",
                     "id": "499c2add-057b-4660-9f1d-14121cbdcdfd",
                     "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Join",
+                    "type": "Button",
+                    "id": "5cc1a86d-7ca7-4eaa-aac8-7875c57a96af",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -807,6 +816,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d86cf379-4ec8-47dd-8522-b53542340626",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Join",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

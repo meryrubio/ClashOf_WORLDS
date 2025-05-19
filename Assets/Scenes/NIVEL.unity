@@ -7488,7 +7488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPooler: {fileID: 771645712}
-  currentWave: 4
+  currentWave: 0
 --- !u!4 &1977967473
 Transform:
   m_ObjectHideFlags: 0

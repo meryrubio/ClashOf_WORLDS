@@ -73,6 +73,7 @@ using UnityEngine.InputSystem;
             // Leer la entrada de movimiento
             moveInput = moveAction.ReadValue<Vector2>();
             bool jumpPressed = jumpAction.triggered; // Verificar si se ha presionado el salto
+            bool joinpressed = joinAction.triggered;
             bool shiftPressed = Keyboard.current.leftShiftKey.isPressed;
 
             //float x = Input.GetAxis("Horizontal");
@@ -87,10 +88,10 @@ using UnityEngine.InputSystem;
                 yvelocity += jumpForce;
             }
 
-        //if (jumpPressed)
-        //{
-        //    Instantiate(playerPrefab, transform.position, Quaternion.identity);
-        //}
+        if (joinpressed)
+        {
+             Instantiate(playerPrefab, transform.position, Quaternion.identity);
+        }
         //// salto
         //Jump(jumpPressed);
 

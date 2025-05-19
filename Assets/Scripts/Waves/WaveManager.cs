@@ -24,7 +24,7 @@ public class WaveManager : MonoBehaviour
     // Método para iniciar una nueva oleada
     public void StartWave()
     {
-        OnEnemyDeath();
+        //OnEnemyDeath();
         int enemiesToSpawn = baseEnemiesPerWave + (currentWave) * 5; // Aumento de 5 enemigos por oleada
         SpawnEnemies(enemiesToSpawn); 
         activeEnemies = enemiesToSpawn;
@@ -40,6 +40,7 @@ public class WaveManager : MonoBehaviour
             StartWave(); // Inicia la siguiente oleada
         }
     }
+
 
     private IEnumerator SpawnEnemiesOverTime(int enemyCount)
     {
@@ -66,7 +67,7 @@ public class WaveManager : MonoBehaviour
                 Debug.LogWarning("No more enemies available in pool. Consider increasing pool size or allowing expansion.");
                 break;
             }
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(.3f);
         }
     }
     
