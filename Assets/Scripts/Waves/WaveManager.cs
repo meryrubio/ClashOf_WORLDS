@@ -53,14 +53,13 @@ public class WaveManager : MonoBehaviour
                 enemy.transform.position = transform.position;
                 enemy.GetComponent<EnemyTypeReference>().enemyType = new Enemy(2, GetComponent<Rigidbody>(), 10, 100);  
 
-                activeEnemies++;
                 // Incrementa el contador de enemigos activos
-                //Enemy enemyBehaviour = enemy.GetComponent<Enemy>();
-                //if (enemyBehaviour != null)
-                //{
-                //    enemyBehaviour.onDeath += OnEnemyDeath; // Suscribe el evento de muerte del enemigo
-                //    // ES POSIBLE QUE EL EVENTO SE DUPLIQUE Y CASDA VEZ QUE AVANCEMOS DE RONDA, LA MUERTE DEL ENEMIGO CUENTE X2, X3,...
-                //}
+                Enemy enemyBehaviour = enemy.GetComponent<EnemyTypeReference>().enemyType;
+                if (enemyBehaviour != null)
+                {
+                    enemyBehaviour.onDeath += OnEnemyDeath; // Suscribe el evento de muerte del enemigo
+                    // ES POSIBLE QUE EL EVENTO SE DUPLIQUE Y CASDA VEZ QUE AVANCEMOS DE RONDA, LA MUERTE DEL ENEMIGO CUENTE X2, X3,...
+                }
             }
             else
             {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyTypeReference : MonoBehaviour
 {
-    public ClashofWorlds.Character enemyType;
+    public Enemy enemyType;
 
 
 }

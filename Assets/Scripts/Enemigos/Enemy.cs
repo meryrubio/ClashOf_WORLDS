@@ -29,7 +29,7 @@ public class Enemy : Character
           health = 100;
             owner.GetComponentInChildren<Animator>()?.Play("die");
           //owner.SetActive(false);
-            
+            onDeath.Invoke();
         }
     }
 }

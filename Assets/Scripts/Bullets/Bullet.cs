@@ -46,6 +46,7 @@ namespace ClashofWorlds
                 type.enemyType.health -= cm.character.damage;
                 gameObject.SetActive(false);
                 type.enemyType.Death(type.gameObject);
+                
             }
         }
 

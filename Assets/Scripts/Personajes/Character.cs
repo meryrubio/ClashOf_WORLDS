@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de nombres
-{
+
     public abstract class Character
     {
         //informacion de los players
@@ -56,4 +55,4 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
             
         
     }
-}
+
