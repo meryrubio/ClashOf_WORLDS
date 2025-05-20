@@ -1564,15 +1564,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_LocalScale.x
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_LocalScale.y
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_LocalScale.z
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1580,11 +1580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4349
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1044
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1616,7 +1616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8551654070373378105, guid: 06289969d330c1140b7a12f5dff17621, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3703,7 +3703,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ac20724969acabb4da7b59ec0bc33e01, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 66ea547ccd7ee05489f319e081a87815, type: 2}
   m_BuildHeightMesh: 0
 --- !u!64 &721030756
 MeshCollider:
@@ -5147,7 +5147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1216774915
 MonoBehaviour:
   m_ObjectHideFlags: 0
