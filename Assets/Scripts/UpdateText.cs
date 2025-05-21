@@ -36,6 +36,14 @@ public class UpdateText : MonoBehaviour
                     auxscore = GameManager.instance.GetKills(); //actualizar lo que vale
                 }
                 break;
+            case GameManager.GameManagerVariables.WAVES:
+                if(auxscore != GameManager.instance.GetWaves())
+                {
+                    textComponent.text = "Oleada: " + GameManager.instance.GetWaves().ToString();
+                    StartCoroutine(FadeOut());
+                    auxscore = GameManager.instance.GetWaves();
+                }
+                break;
             default:
                 break;
 

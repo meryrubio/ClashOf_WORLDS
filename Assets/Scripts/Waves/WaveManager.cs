@@ -7,7 +7,7 @@ public class WaveManager : MonoBehaviour
 {
     [Tooltip("Reference to the ObjectPooler script")]
     public Pool objectPooler;
-    public int currentWave = 0; // Contador de oleadas
+    private int currentWave = 1; // Contador de oleadas
     private int baseEnemiesPerWave = 5; // Enemigos base por la primera oleada
     private int activeEnemies = 0; // Cuenta de enemigos activos
 
@@ -25,10 +25,12 @@ public class WaveManager : MonoBehaviour
     public void StartWave()
     {
         //OnEnemyDeath();
+        GameManager.instance.SetWaves(currentWave);
         int enemiesToSpawn = baseEnemiesPerWave + (currentWave) * 5; // Aumento de 5 enemigos por oleada
         SpawnEnemies(enemiesToSpawn); 
         activeEnemies = enemiesToSpawn;
         currentWave++;
+
     }
 
     // Método que se ejecuta cuando un enemigo muere

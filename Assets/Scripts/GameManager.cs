@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
@@ -13,10 +14,10 @@ public class GameManager : MonoBehaviour
     //este script controla todo, funcionalidad y variabbles
 
     public static GameManager instance; // accesible a todo (variable estática) SINGLETON
-    public enum GameManagerVariables { TIME, KILLS }; // tipo enum (enumerar) para facilitar la lectura de código, time seria 0, points 1
+    public enum GameManagerVariables { TIME, KILLS, WAVES }; // tipo enum (enumerar) para facilitar la lectura de código, time seria 0, points 1
 
     private float time;
-    private int kills;
+    private int kills, waves;
    
 
     //[HideInInspector]
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore(int amount) // este metodo sirve para que los puntos puedan ir amuentando
     {
         kills += amount;
+      
     }
     public int GetKills()
     {
@@ -91,8 +93,19 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
     }
+
     public void PauseMenu()
     {
         Time.timeScale = 0;
+    }
+
+    public int GetWaves()
+    {
+        return waves; 
+    }
+
+    public void SetWaves(int value)
+    {
+        waves = value;
     }
 }
