@@ -68,7 +68,7 @@ public class AttackState : State
             CharacterManager cm = FindObjectOfType<CharacterManager>();
             EnemyTypeReference type = FindObjectOfType<EnemyTypeReference>();
             cm.character.health -= type.enemyType.damage;
-            if (cm.character.health == 0)
+            if (cm.character.health <= 0)
             {
                 FindAnyObjectByType<GameOver>().ShowGameOver();
             }
