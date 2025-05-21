@@ -14,8 +14,8 @@ public class WaveManager : MonoBehaviour
 
     private void Start()
     {
-        StartWave(); 
-        
+        StartWave();
+
     }
     public void SpawnEnemies(int enemyCount)
     {
@@ -27,19 +27,35 @@ public class WaveManager : MonoBehaviour
         //OnEnemyDeath();
         GameManager.instance.SetWaves(currentWave);
         int enemiesToSpawn = baseEnemiesPerWave + (currentWave) * 5; // Aumento de 5 enemigos por oleada
-        SpawnEnemies(enemiesToSpawn); 
+        SpawnEnemies(enemiesToSpawn);
         activeEnemies = enemiesToSpawn;
         currentWave++;
 
     }
+    private IEnumerator WaveRoutine()
+    {
+        // Espera 30 segundos antes de cada oleada
+        yield return new WaitForSeconds(15f);
 
-    // Método que se ejecuta cuando un enemigo muere
-    private void OnEnemyDeath()
+        // Actualiza el UI / contador de oleadas
+        GameManager.instance.SetWaves(currentWave);
+
+        // Calcula cuántos enemigos spawnear
+        int enemiesToSpawn = baseEnemiesPerWave + (currentWave * 5);
+        SpawnEnemies(enemiesToSpawn);
+        activeEnemies = enemiesToSpawn;
+
+        // Prepara la siguiente oleada
+        currentWave++;
+    }
+
+        // Método que se ejecuta cuando un enemigo muere
+        private void OnEnemyDeath()
     {
         activeEnemies--;
         if (activeEnemies == 0) // Si no quedan enemigos activos
         {
-            StartWave(); // Inicia la siguiente oleada
+            StartCoroutine(WaveRoutine()); // Inicia la siguiente oleada
         }
     }
 
