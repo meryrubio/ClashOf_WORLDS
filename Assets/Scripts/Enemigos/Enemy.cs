@@ -11,7 +11,7 @@ public class Enemy : Character
     // El evento público que otros scripts pueden suscribirse para ser notificados cuando el enemigo "muera"
     public event DeathEventHandler onDeath;
 
-    public Enemy(float speed, Rigidbody rb, float damage, float health) : base(5, rb, Resources.Load<GameObject>("Enemy"), 10, 100)//constructor general de los personajes
+    public Enemy(float speed, Rigidbody rb, float damage, float health) : base(5, rb, Resources.Load<GameObject>("Enemy"), 1000, 100)//constructor general de los personajes
     {
 
     }

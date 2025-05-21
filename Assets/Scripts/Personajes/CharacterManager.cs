@@ -46,6 +46,7 @@ public class CharacterManager : MonoBehaviour
             //Animator animator = owner.GetComponent<Animator>();
             //animator.SetBool(blendParameter, true);
         }
+        
     }
    
 }

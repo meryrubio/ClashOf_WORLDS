@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using ClashofWorlds;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 [CreateAssetMenu(fileName = "AttackState (S)", menuName = "ScriptableObjects/States/AttackState")]
 public class AttackState : State
@@ -67,10 +68,14 @@ public class AttackState : State
             CharacterManager cm = FindObjectOfType<CharacterManager>();
             EnemyTypeReference type = FindObjectOfType<EnemyTypeReference>();
             cm.character.health -= type.enemyType.damage;
-            cm.character.Death(player);
+            if (cm.character.health == 0)
+            {
+                FindAnyObjectByType<GameOver>().ShowGameOver();
+            }
+
         }
 
-        Debug.Log($"Attacked {player.name} for  damage!");
+        
     }
 
     private void MoveTowardsEnemy(GameObject owner, GameObject player)

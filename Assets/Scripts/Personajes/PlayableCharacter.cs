@@ -24,7 +24,7 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
 
         public override void Death(GameObject owner)
         {
-           
+            
         }
 
     }
