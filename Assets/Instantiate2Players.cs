@@ -9,9 +9,33 @@ public class Instantiate2Players: MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-            Instantiate(prefab);
-            Instantiate(prefab);
+        //Instantiate(prefab);
+        //Instantiate(prefab);
+
+
+        // Dispositivo 1: teclado
+        var keyboard = Keyboard.current;
+        if (keyboard != null)
+        {
+            PlayerInput.Instantiate(prefab,
+                controlScheme: "Keyboard&Mouse",
+                pairWithDevice: keyboard);
+        }
+
+        // Dispositivo 2: gamepad
+        var gamepad = Gamepad.all.Count > 0 ? Gamepad.all[0] : null;
+        if (gamepad != null)
+        {
+            PlayerInput.Instantiate(prefab,
+                controlScheme: "Gamepad",
+                pairWithDevice: gamepad);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró ningún gamepad conectado.");
+        }
     }
+
 
     private void Update()
     {

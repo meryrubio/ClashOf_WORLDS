@@ -8,26 +8,46 @@ public class BulletPool : MonoBehaviour
     public Pool bulletPool;
     public PoolType poolTypeToSearch;
 
-    //public enum PoolType
-    //{
-    //    CraneoBullet,
-    //    GhostFaceBullet,
-    //    PanteraBullet
-    //}
+    
 
 
     private void Start()
     {
-        Pool[] pools = FindObjectsOfType<Pool>();
 
-        foreach (Pool pool in pools)
+        PoolType typeToSearch = PoolType.BULLET_CRANEO;
+
+        switch (GameManager.instance.characterType)
         {
-            if (pool.poolType == poolTypeToSearch)  
+            case Characters.CRANEO:
+                typeToSearch = PoolType.BULLET_CRANEO;
+                break;
+            case Characters.GHOSTFACE:
+                typeToSearch = PoolType.BULLET_GHOSTFACE;
+                break;
+            case Characters.PANTERA:
+                typeToSearch = PoolType.BULLET_PANTERA;
+                break;
+        }
+
+        Pool[] allPools = FindObjectsOfType<Pool>();
+        foreach (Pool pool in allPools)
+        {
+            if (pool.poolType == typeToSearch)
             {
                 bulletPool = pool;
                 break;
             }
         }
+        //Pool[] pools = FindObjectsOfType<Pool>();
+
+        //foreach (Pool pool in pools)
+        //{
+        //    if (pool.poolType == poolTypeToSearch)  
+        //    {
+        //        bulletPool = pool;
+        //        break;
+        //    }
+        //}
 
 
     }

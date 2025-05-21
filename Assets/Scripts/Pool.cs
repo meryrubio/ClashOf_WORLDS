@@ -2,7 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PoolType { BULLET, GRENADE,ENEMY}
+public enum PoolType
+{
+    BULLET_CRANEO,
+    BULLET_GHOSTFACE,
+    BULLET_PANTERA,
+    GRENADE,
+    ENEMY
+}
 public class Pool : MonoBehaviour
 {
     private List<GameObject> poolList;
