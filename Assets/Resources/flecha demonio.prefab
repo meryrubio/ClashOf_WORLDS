@@ -147,3 +147,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   dir: {x: 0, y: 0, z: 0}
+  shootClip: {fileID: 8300000, guid: 45f689a6ff368c744ae3cc3df8afc3b5, type: 3}

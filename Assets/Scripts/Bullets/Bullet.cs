@@ -10,12 +10,16 @@ namespace ClashofWorlds
         public Vector3 dir;
         private Rigidbody rb;
         private float currentTime = 0;
+
+        public AudioClip shootClip; //audio de disparo
+
         // Start is called before the first frame update
         void Start()
         {
 
            rb = GetComponent<Rigidbody>();
-           
+            AudioManager.instance.PlayAudio(shootClip, "shootSound");
+
         }
 
         // Update is called once per frame

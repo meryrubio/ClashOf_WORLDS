@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     public float regenInterval = 5f; // Intervalo de tiempo para regenerar salud
     private float lastDamageTime; // Tiempo del último daño recibido
 
+    
+
     void Start()
     {
 
@@ -42,9 +44,10 @@ public class Health : MonoBehaviour
 
     // Método que se llama cuando el jugador muere
       void  Die()
-    {
-      Destroy(gameObject);
-    }
+        {
+      
+        Destroy(gameObject);
+        }
 
    
 }

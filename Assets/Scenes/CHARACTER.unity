@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd860fea662534f40a06be58197cdbfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 4d2332f77836d084c95ecb185224a7e1, type: 3}
   isLoop: 1
   playOnGameStart: 1
   volume: 1

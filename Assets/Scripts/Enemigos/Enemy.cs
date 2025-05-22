@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+   
+
     public delegate void DeathEventHandler();
 
     // El evento público que otros scripts pueden suscribirse para ser notificados cuando el enemigo "muera"
@@ -28,7 +30,8 @@ public class Enemy : Character
           GameManager.instance.IncreaseScore(1);
           health = 100;
             owner.GetComponentInChildren<Animator>()?.Play("die");
-          //owner.SetActive(false);
+            
+            //owner.SetActive(false);
             onDeath.Invoke();
         }
     }

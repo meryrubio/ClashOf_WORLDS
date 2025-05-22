@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c2f5b7e312877f443916efe00368241e, type: 3}
       propertyPath: m_Name
-      value: Bullet
+      value: bala ghostface
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   dir: {x: 0, y: 0, z: 0}
+  shootClip: {fileID: 8300000, guid: 1d835817cbd61bf409e7013031af4c4e, type: 3}
 --- !u!136 &7145292540392668222
 CapsuleCollider:
   m_ObjectHideFlags: 0

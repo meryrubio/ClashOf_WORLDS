@@ -812,10 +812,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd860fea662534f40a06be58197cdbfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: e3b41c49484e8ea4c8c11e00def80dab, type: 3}
   isLoop: 1
   playOnGameStart: 1
-  volume: 5
+  volume: 0.5
   gameObjectName: 
 --- !u!4 &1937758265
 Transform:

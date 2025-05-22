@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource PlayAudio(AudioClip audioClip, string gameObjectName, bool isLoop = false, float volume = 1.0f) // isLoop y float volume --> parametros por defectos (valores por defecto), tienen que ir al final y no pueden estar intercalados
     {
         GameObject audioObject = new GameObject(gameObjectName); // para darle nombre e identificarlo en la escena 
-        audioObject.transform.SetParent(transform); // todos los objetos del audio que se van creando sean hijos del audio manager.
+        //ÇaudioObject.transform.SetParent(transform); // todos los objetos del audio que se van creando sean hijos del audio manager.
         AudioSource audioSourceComponent = audioObject.AddComponent<AudioSource>();// le añado el componente de AudioSource 
         audioSourceComponent.clip = audioClip; // asignamos el clip al compenente y el clip que asignamos es nuestro metodo
         audioSourceComponent.volume = volume; // ""
@@ -50,11 +50,14 @@ public class AudioManager : MonoBehaviour
         return audioSourceComponent; // porsiaca  desde otros componentes queremos utilizar otros parametros del AudioSource
     }
 
-    public AudioSource PlayAudio3D(AudioClip audioClip, string gameObjectName, bool isLoop = false, float volume = 1.0f)
+    public AudioSource PlayAudio3D(AudioClip audioClip, string gameObjectName, GameObject owner, float minDistance, float maxDistance, bool isLoop = false, float volume = 1.0f)
     {
         AudioSource audioSorce = PlayAudio(audioClip, gameObjectName, isLoop, volume);
+        audioSorce.gameObject.transform.SetParent(owner.transform);
         audioSorce.spatialBlend = 1f;
-
+        audioSorce.minDistance = minDistance;
+        audioSorce.maxDistance = maxDistance;
+        audioSorce.gameObject.transform.localPosition = Vector3.zero;
         return audioSorce;
     }
 
@@ -79,5 +82,4 @@ public class AudioManager : MonoBehaviour
 
         audioList.Clear(); //borra todo el contenido de la lista ( por qué se queda memoria y hay que borrarla tambien)
     }
-
 }
