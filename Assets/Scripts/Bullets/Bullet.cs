@@ -12,7 +12,7 @@ namespace ClashofWorlds
         private float currentTime = 0;
 
         public AudioClip shootClip; //audio de disparo
-
+        public powerupBehaviour powerup;
         // Start is called before the first frame update
         void Start()
         {
@@ -50,7 +50,10 @@ namespace ClashofWorlds
                 type.enemyType.health -= cm.character.damage;
                 gameObject.SetActive(false);
                 type.enemyType.Death(type.gameObject);
-                
+                if(type.enemyType.health <= 0)
+                {
+                    
+                }
             }
         }
 

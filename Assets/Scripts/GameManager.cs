@@ -9,6 +9,7 @@ public enum Characters //tipo enumerado, le puede poner nombres a los numeros: e
 {
     CRANEO, GHOSTFACE, PANTERA
 }
+
 public class GameManager : MonoBehaviour
 {
     //este script controla todo, funcionalidad y variabbles
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     //[HideInInspector]
     public Characters characterType; //variable para los personajes, sea posible elegir el tipo de personaje
-
+    public Powerups powerupsType;
     private void Awake()
     {
         if (!instance)// si instance no tiene info

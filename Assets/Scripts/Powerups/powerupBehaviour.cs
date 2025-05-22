@@ -17,6 +17,12 @@ public class powerupBehaviour : MonoBehaviour
             case powerupEnum.RESTAUREHEALTH: 
                 powerup = new RestaureHealth(); 
                 break;
+            case powerupEnum.SPEEDINCREASE: 
+                powerup = new SpeedIncrease();
+                break;
+            case powerupEnum.DAMAGEINCREASE: 
+                powerup = new DamageIncrease();
+                break;
         }
 
         GetComponent<MeshFilter>().mesh = powerup.GetMesh();
