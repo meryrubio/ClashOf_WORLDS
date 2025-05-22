@@ -8,14 +8,37 @@ public class SetCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player_movement[] players = FindObjectsOfType<Player_movement>();
+        
+        StartCoroutine(AssignCamerasToCanvas());
+        
 
-        int i = 0;
-        foreach (Player_movement item in players)
+        IEnumerator AssignCamerasToCanvas()
         {
-            canvas[i].worldCamera = item.GetComponentInChildren<Camera>();
-            i++;
+            // Espera un frame para que los jugadores estén instanciados
+            yield return null;
+
+            Player_movement[] players = FindObjectsOfType<Player_movement>();
+
+            int i = 0;
+            foreach (Player_movement item in players)
+            {
+                if (i < canvas.Length)
+                {
+                    canvas[i].worldCamera = item.GetComponentInChildren<Camera>();
+                }
+                i++;
+            }
         }
+
+
+        //Player_movement[] players = FindObjectsOfType<Player_movement>();
+
+        //int i = 0;
+        //foreach (Player_movement item in players)
+        //{
+        //    canvas[i].worldCamera = item.GetComponentInChildren<Camera>();
+        //    i++;
+        //}
     }
 
     // Update is called once per frame

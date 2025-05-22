@@ -19,6 +19,8 @@ using UnityEngine.InputSystem;
         private InputAction joinAction;
         private Vector2 moveInput;
 
+    public Characters characterType;
+
 
 
     public GameObject playerPrefab;

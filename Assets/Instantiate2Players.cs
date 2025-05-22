@@ -17,23 +17,46 @@ public class Instantiate2Players: MonoBehaviour
         var keyboard = Keyboard.current;
         if (keyboard != null)
         {
-            PlayerInput.Instantiate(prefab,
+            var player1 = PlayerInput.Instantiate(prefab,
                 controlScheme: "Keyboard&Mouse",
                 pairWithDevice: keyboard);
+
+            // Asigna Cráneo
+            player1.GetComponent<Player_movement>().characterType = Characters.CRANEO;
         }
+        //var keyboard = Keyboard.current;
+        //if (keyboard != null)
+        //{
+        //    PlayerInput.Instantiate(prefab,
+        //        controlScheme: "Keyboard&Mouse",
+        //        pairWithDevice: keyboard);
+
+
+        //}
 
         // Dispositivo 2: gamepad
+        // GhostFace con mando
         var gamepad = Gamepad.all.Count > 0 ? Gamepad.all[0] : null;
         if (gamepad != null)
         {
-            PlayerInput.Instantiate(prefab,
+            var player2 = PlayerInput.Instantiate(prefab,
                 controlScheme: "Gamepad",
                 pairWithDevice: gamepad);
+
+            // Asigna GhostFace
+            player2.GetComponent<Player_movement>().characterType = Characters.GHOSTFACE;
         }
-        else
-        {
-            Debug.LogWarning("No se encontró ningún gamepad conectado.");
-        }
+        //var gamepad = Gamepad.all.Count > 0 ? Gamepad.all[0] : null;
+        //if (gamepad != null)
+        //{
+        //    PlayerInput.Instantiate(prefab,
+        //        controlScheme: "Gamepad",
+        //        pairWithDevice: gamepad);
+        //}
+        //else
+        //{
+        //    Debug.LogWarning("No se encontró ningún gamepad conectado.");
+        //}
     }
 
 
