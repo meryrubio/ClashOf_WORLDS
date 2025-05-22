@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOverPanel;
+    public AudioClip deadClip; //audio de muerte
 
     public void ShowGameOver()
     {
@@ -14,6 +15,8 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        AudioManager.instance.PlayAudio(deadClip, "deadSound");
     }
     public void Menu(string MenuName)
     {

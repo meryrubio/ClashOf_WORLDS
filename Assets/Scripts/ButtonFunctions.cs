@@ -20,7 +20,7 @@ public class ButtonFunctions : MonoBehaviour
         GameManager.instance.characterType = (Characters)CharacterIndex;
 
         foreach (Transform child in transform.parent)
-        {  
+        {
             child.SendMessage("ChangeImage", CharacterIndex, SendMessageOptions.DontRequireReceiver);// sendmessage recorre cada uno de los componentes del objeto y comprueba que tenga el changeimage
 
 
@@ -41,4 +41,10 @@ public class ButtonFunctions : MonoBehaviour
         buttonPause.SetActive(true);
         menuPause.SetActive(false);
     }
+
+    public void AudioClip(AudioClip clip)
+    {
+        AudioSource audiosource = AudioManager.instance.PlayAudio(clip, "button");
+    }
+
 }
