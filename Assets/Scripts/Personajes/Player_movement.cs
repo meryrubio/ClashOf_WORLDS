@@ -20,7 +20,7 @@ using UnityEngine.InputSystem;
         private Vector2 moveInput;
 
     public Characters characterType;
-
+    public Canvas myCanvas;
 
 
     public GameObject playerPrefab;
@@ -43,10 +43,15 @@ using UnityEngine.InputSystem;
 
         void Start()
         {
-            //characterController = GetComponent<CharacterController>();
-            //gravityScale = Mathf.Abs(gravityScale);
-           
-        }
+        // Asignar el canvas a la cámara del jugador
+            if (myCanvas != null)
+            {
+                myCanvas.worldCamera = GetComponentInChildren<Camera>();
+            }
+        //characterController = GetComponent<CharacterController>();
+        //gravityScale = Mathf.Abs(gravityScale);
+
+    }
 
 
         private void OnEnable()
