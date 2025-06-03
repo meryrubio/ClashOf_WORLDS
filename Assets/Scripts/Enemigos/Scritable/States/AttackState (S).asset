@@ -18,6 +18,6 @@ MonoBehaviour:
       actionValue: 0
     nextState: {fileID: 11400000, guid: a7a19a9714114f84fa1aadd39abd7465, type: 2}
     and: 0
-  attackRange: 2
+  attackRange: 5
   attackCooldown: 5
-  currentTime: 0.82566124
+  currentTime: 0
