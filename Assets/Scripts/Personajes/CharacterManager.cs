@@ -12,6 +12,8 @@ public class CharacterManager : MonoBehaviour
     public ClashofWorlds.PlayableCharacter character; //variable protejida para los personajes
     Animator animator;
     private float currentTime;
+    
+    private Player_Animations playerAnimations;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,9 @@ public class CharacterManager : MonoBehaviour
         {
             currentTime = 0;
             character.Attack(gameObject);
+
+            if (playerAnimations != null)
+                playerAnimations.PlayShootAnimation();
             //Animator animator = owner.GetComponent<Animator>();
             //animator.SetBool(blendParameter, true);
         }

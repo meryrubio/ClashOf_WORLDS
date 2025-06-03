@@ -30,8 +30,8 @@ namespace ClashofWorlds
 
             }
         }
-    
-    public override void Death(GameObject owner)
+
+        public override void Death(GameObject owner)
         {
             if (health <= 0)
             {

@@ -7547,7 +7547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620b7c776bf765841a629a55f84661c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterType: 0
+  characterType: 1
 --- !u!4 &1717251345
 Transform:
   m_ObjectHideFlags: 0
@@ -7653,6 +7653,8 @@ MonoBehaviour:
   jumpForce: 200
   runningSpeed: 5
   acceleration: 2
+  characterType: 0
+  myCanvas: {fileID: 0}
   playerPrefab: {fileID: 0}
 --- !u!143 &1729010399
 CharacterController:
@@ -8696,7 +8698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolSize: 20
-  shouldExpand: 0
+  shouldExpand: 1
   objectToPool: {fileID: 7228588005207627608, guid: 94996947b91117842bd94d0299b336c8, type: 3}
   poolType: 0
 --- !u!4 &1984976447

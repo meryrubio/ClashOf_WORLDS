@@ -19,11 +19,23 @@ public class Player_Animations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-    }
+        // Control de Idle/Walk según velocidad
+        float speed = player_Movement.GetCurrentSpeed();
+        animator.SetFloat("Speed", speed);
 
+    }
+    public void PlayShootAnimation()
+    {
+        animator.SetTrigger("Shoot");
+    }
     private void LateUpdate()
     {
+        float speed = player_Movement.GetCurrentSpeed();
+
+        // Si el personaje se está moviendo (aunque sea despacio), activar animación de andar
+        animator.SetFloat("Speed", speed);
+
+
         //animator.SetFloat("Speed", player_Movement.GetCurrentSpeed() / player_Movement.runningSpeed);
     }
 }

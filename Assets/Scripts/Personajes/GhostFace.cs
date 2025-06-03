@@ -8,6 +8,7 @@ namespace ClashofWorlds
 {
     public class GhostFace : PlayableCharacter
     {
+        public GameObject gameOverPanel;
         public GhostFace(float speed, Rigidbody rb) : base(speed, rb, Resources.Load<GameObject>("Ghostface"), 15, 100, 2)
         {
         }
@@ -30,5 +31,16 @@ namespace ClashofWorlds
             }
         }
 
+        public override void Death(GameObject owner)
+        {
+            if (health <= 0)
+            {
+                GameManager.instance.GameOver();
+                owner.SetActive(false);
+                gameOverPanel.SetActive(true);
+                //GameManager.instance
+
+            }
+        }
     }
 }

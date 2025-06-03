@@ -25,6 +25,8 @@ using UnityEngine.InputSystem;
 
     public GameObject playerPrefab;
 
+    private Animator animator;
+
     // Start is called before the first frame update
 
         void Awake()
@@ -32,14 +34,16 @@ using UnityEngine.InputSystem;
             characterController = GetComponent<CharacterController>();
             gravityScale = Mathf.Abs(gravityScale);
 
+
             // Inicializar el sistema de entrada
             inputAsset = GetComponent<PlayerInput>().actions;
             player = inputAsset.FindActionMap("Player");
         moveAction = player.FindAction("Move");
         jumpAction = player.FindAction("Jump");
         joinAction = player.FindAction("Join");
-         
-        }   
+
+        animator = GetComponent<Animator>();
+    }   
 
         void Start()
         {

@@ -16,6 +16,7 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
             //_controller = cont;
 
         }
+       
 
         public override void Attack(GameObject owner) 
         {
@@ -24,7 +25,7 @@ namespace ClashofWorlds //crea un espacio de nombres para evitar la colision de 
 
         public override void Death(GameObject owner)
         {
-            
+           
         }
 
     }
